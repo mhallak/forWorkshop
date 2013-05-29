@@ -1,0 +1,60 @@
+#Allow core dump
+ulimit -c unlimited
+export PATH="~/bin:$PATH"
+#export ROS_HOSTNAME=localhost
+export EDITOR='vi'
+#source /usr/share/drcsim-1.0/setup.sh
+#TI="/opt/ti2/"
+alias a=alias
+alias h=history
+alias j=jobs
+alias d=date
+alias rm='rm -i'
+alias ver='lsb_release -a'
+alias cdw='cd /home/michele/git/robil'
+source ~/.git-completion.bash
+source /usr/share/drcsim/setup.sh
+#source /usr/local/share/drcsim-1.3/setup13.sh
+#source /usr/local/share/drcsim/setup.sh
+#source /home/userws4/drcsim-1.3.0/build/setup.sh
+#alias start12='source /home/userws4/drcsim1.2/build/setup.sh'
+#alias start='source /usr/share/drcsim/setup.sh'
+#ROS
+alias wl='roslaunch pr2_gazebo pr2_wg_world.launch'
+alias ct='roslaunch pr2_teleop teleop_keyboard.launch'
+alias rb='rosrun image_view image_view image:=/wide_stereo/left/image_color'
+alias c21='roscd C21_VisionAndLidar/bin/; ./c21 /left_eye/image_raw /right_eye/image_raw'
+#alias c21='roscd c21_Vision_and_Lidar/bin/; ./c21 wide_stereo/left/image_color wide_stereo/right/image_color'
+alias test21='roscd C21_VisionAndLidar/bin/; ./test1'
+#NEW SIM
+#alias sim='roslaunch drc_robot_utils drc_robot.launch'
+alias sim='roslaunch atlas_utils atlas.launch'
+alias pin='rostopic pub /mode std_msgs/String "data: 'unpinned'"'
+alias dsg='roslaunch C34_Designer start.launch'
+alias c41='rosrun C41_BodyControl C41_Node.py'
+alias xx='rosrun C34_Executer executer'
+alias c31='rosrun C31_PathPlanner gpp'
+alias c42='roslaunch C42_ZMPWalk zmp_walk.launch'
+alias up='rosrun drc_robot_utils reset_pose.py'
+#alias clouds='/userhome/mhallak/cloudsim-1.0.3/bin/create_cloudsim.py hugo.guterman@gmail.com AKIAJ3XTILJCANC62EHQ +F13iHybGB0IrWVog6N3dznPlhM33mUubo9XqDP6'
+
+alias win='rdesktop darpawin1 -u darpawin1 -p 1qaz2wsx -g workarea'
+#export ROS_WORKSPACE=/userhome/mhallak/sandbox
+#alias clsim='source ~/cloudsim_start_tutorial/simulator_cxbfc5eaa4/ssh.sh'
+#alias clgen='source ~/cloudsim_test_4b4c1e3a/ssh.sh'
+#alias clvpn='sudo openvpn openvpn.config'
+#alias clros='source ~/cloudsim_start_tutorial/simulator_cxbfc5eaa4/ros.sh'
+export ROS_PACKAGE_PATH="$ROS_PACKAGE_PATH:/opt/ros/fuerte/packages/:/home/michele/git:/home/michele/packages:/home/michele/playground"
+export GAZEBO_RESOURCE_PATH="/home/michele/michele/worlds:$GAZEBO_RESOURCE_PATH"
+export LD_LIBRARY_PATH="/opt/ros/fuerte/stacks/visualization_common/ogre/ogre/lib:$LD_LIBRARY_PATH"
+alias jenk='java -jar ./.icedtea/cache/0/http/mirrors.jenkins-ci.org/war/latest/jenkins.war'
+alias ver='rospack find atlas; rospack find atlas_utils'
+alias cds='cd /home/michele/git/robil/C0_Scripts'
+alias clvpn='sudo ./start_vpn.bash'
+alias smartgit='/home/michele/smartgithg-4_0_3/bin/smartgithg.sh'
+alias q2='roscd position0;python traj_yaml.py Traj_data.yaml move_hand_0'
+export ROBIL=/home/michele/git/robil
+alias c23='rosrun C23_ObjectRecognition C23 /multisense_sl/camera/left/image_color /multisense_sl/camera/right/image_color /multisense_sl/camera/points2'
+alias db='~/.dropbox-dist/dropboxd'
+alias rmcore='find . -name core | xargs rm'
+export VRC_CHEATS_ENABLED=1

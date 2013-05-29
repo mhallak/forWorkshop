@@ -1,0 +1,17 @@
+JENKINS:
+
+su - jenkins
+ssh-agent-wrapper.sh
+. .ssh/agent.env
+ssh-add
+ANI OHEV YAM 7 Baboker 
+with space
+******************************
+/usr/local/bin/backup_jenkins.sh
+/usr/local/bin/ssh-agent-wrapper.sh
+**********************************
+this is user 1
+************************
+
+
+
